@@ -71,7 +71,7 @@ def choose():
 def download():
     filename1 = filedialog.asksaveasfile(initialdir="/", title="Select file", filetypes=(("text files", "*.csv"),
                                                                                         ("all files", "*.*")))
-    df.to_csv(filename1.name)
+    df.to_csv(filename1.name + ".csv")
     success = tkinter.Label(window, text="File saved successfully. You can see it in\n{} folder".format(filename1.name),
                             background="#00cc99", foreground="white")
     success.grid(row=len(df.index)+5, column=0, sticky="w", padx=400)
